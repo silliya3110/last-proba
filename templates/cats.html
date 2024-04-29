@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>НАШИ КОТЫ</title>
+</head>
+<body>
+    <a href="{{ url_for('index') }}">на главную</a>
+    {% for el in cats %}
+   <div class="alert">
+       <!-- <p>{{ el.photo }}</p> -->
+       <h2><u>{{ el.name }}</u></h2>
+       <img src="{{ el.photo }}" alt="{{ el.name }} " width="300" height="400">>
+       <p>{{ el.about_cat }}</p>
+       {% endfor %}
+   </div>
+</body>
+</html>

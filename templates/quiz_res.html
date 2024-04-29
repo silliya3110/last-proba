@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>итоги</title>
+</head>
+<body>
+    <h1>Поздравляем, вы прошли квиз:)</h1>
+    <h1>Ваш результат: {{ score }} правильных ответов из {{ total }}</h1>
+    {% for i in range(10) %}
+    <h3>{{ loop.index }}: {{ questionsss[i] }}</h3>
+    <h3>Ваш ответ: {{ answers[i] }}</h3>
+    <h3>Правильный ответ: {{ correct_ans[i] }}</h3>
+    {% endfor %}
+</body>
+</html>

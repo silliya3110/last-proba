@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>квиз</title>
+</head>
+<body>
+    <h1>Вопросы:</h1>
+    <form method="post">
+            {% for question in questions %}
+            <h3>{{ loop.index }}: {{ question.question }}</h3>
+            {% for option in question.options %}
+                <input type="radio" name="{{ question.question }}" value="{{ option }}"> {{ option }} <br>
+            {% endfor %}
+        {% endfor %}
+        <br>
+        <input type="submit" value="К результам">
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ОТЗЫВЫ</title>
+</head>
+<body>
+    <h1>Отзывы</h1>
+    {% for el in all_rev %}
+    <div class="alert alert-info">
+        <h2>{{ el.user_name }}</h2>
+        <p>{{ el.text }}</p>
+    </div>
+    {% endfor %}
+    <a href="{{ url_for('add_rev') }}">оставить отзыв</a>
+    <a href="{{ url_for('index') }}">на главную</a><br>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>УКОТОВИТЕЛЬСТВО</title>
+</head>
+<body>
+    <h1>Анкета:</h1>
+    <form method="post">
+        <input type="text" name="name" id="name" placeholder="ФИО:"><br>
+        <input type="tel" name="phone_number" id="phone_number" placeholder="Номер телефона:"><br>
+        <input type="email" name="email" id="email" placeholder="Введите адрес электронной почты:"><br>
+        <input type="text" name="cat_name" id="cat_name" placeholder="Кличка кота:"><br>
+        <textarea name="info_text" id="info_text" placeholder="Расскажите, чем вам приглянулся именно этот кот:"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form><br>
+<a href="{{ url_for('index') }}">на главную</a>
+</body>
+</html>
